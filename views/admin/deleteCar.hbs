@@ -1,0 +1,49 @@
+<br><br><br>
+
+
+<ul class="pagination">
+        <li class="page-item"><a class="page-link" href="?page={{pageObj.prevPage}}">Prev page</a></li>
+        <li class="page-item" ><a class="page-link" href="?page={{pageObj.nextPage}}">Next page</a></li>
+      </ul>
+      
+    {{#each allCar}}
+    <div class="car-section row">
+        <div class="col-md-2 col-sm12">
+            <h5>Name:</h5>
+            <p>{{this.name}}</p>
+        </div>
+        <div class="col-md-2 col-sm12">
+            <h5>Model :</h5>
+            <p>{{this.model}}</p>
+        </div>
+        <div class="col-md-2 col-sm12">
+            <h5>Capacity :</h5>
+            <p>{{this.capacity}}</p>
+        </div>
+        <div class="col-md-2 col-sm12">
+            <h5>Price</h5>
+            <p>{{this.price}}</p>
+        </div>
+        <div class="col-md-2 col-sm12">
+            <h5>Year</h5>
+            <p>{{this.year}}</p>
+        </div>
+        <div class="col-md-2 col-12">
+            <form action="/deleteCar/{{this._id}}" method="POST">
+                <fieldset>
+                <input type="submit"  class="btn btn-outline-success my-2 my-sm-0" value="Delete This Car">
+                </fieldset>
+        </form>
+        </div>
+        
+    </div>
+    {{/each}}
+
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="?page={{pageObj.prevPage}}">Prev page</a></li>
+        <li class="page-item" ><a class="page-link" href="?page={{pageObj.nextPage}}">Next page</a></li>
+      </ul>
+
+
+
+

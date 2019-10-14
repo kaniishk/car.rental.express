@@ -1,0 +1,36 @@
+<h1>All cars for rent</h1>
+
+<form action="/searchingDate" method="GET">
+  <fieldset>
+    <legend>Search by Date:</legend>
+
+    <label for="name">Date:</label>
+    <input type="date" name="searchDate">
+    <input type="submit"><br>
+</fieldset>
+
+
+</form>
+
+    {{#each searchedCars}}
+        <h3>Name:</h3>
+        <p>{{this.name}}</p>
+
+        <h3>Model :</h3>
+        <p>{{this.model}}</p>
+
+        <h3>Capacity:</h3>
+        <p>{{this.capacity}}</p>
+
+        <h3>Year:</h3>
+        <p>{{this.year}}</p>
+        
+        <h3>Price:</h3>
+        <p>{{this.price}}</p>
+
+        
+        <a href="/carDetails/{{this._id}}"><b>TAKE THIS CAR</b></a><br>
+        __________________________________
+        <br>
+
+    {{/each}}
