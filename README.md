@@ -1,4 +1,4 @@
-# car.rental.whitepanda
+# car.rental.express
 
 Link for heroku app: 
 
